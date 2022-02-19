@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--Alunos – Sarah Maciel, Nicoly, Marco, Guilherme,Akira 3B-->
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet"/>
+</head>
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color:rgba(87,54,87,0.94)" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{% url 'home' %}">Notícias Todo Dia </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'sobrenos' %}"> Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'usuario' %}">Usuário</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'noticia' %}">Notícias</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<body>
+ <div class="card">
+        <div class="card-body">
+            <h4 style="margin-top: 80px"> Seu Cadastro </h4>
+            <hr>
+            <table class="table table-striped">
+              <thead >
+                <tr>
+                      <th>Nome</th>
+                      <th>Email</th>
+                      <th>tipo</th>
+                      <th>Ações</th>
+                 </tr>
+                </thead>
+
+            <tbody class="">
+            <tr>
+                <td> João </td>
+                <td> joão@gmail.com </td>
+                <td>comum</td>
+                 <th>
+                    <button class="btn btn-warning"> Modificar </button>
+                </th>
+            </tr>
+
+            </tbody>
+         </table>
+        </div>
+
+    </div>
+    </div>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.3/assets/js/docs.min.js"></script>
+</body>
+

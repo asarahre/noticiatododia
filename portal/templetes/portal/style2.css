@@ -1,0 +1,215 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Open Sans";
+}
+
+
+/**Boot CSS**/
+
+html,body{
+   height: 100%;
+}
+
+input{
+   border:0;
+}
+
+img{
+   width: 100%;
+   max-width: 400px;
+}
+
+.center{
+   max-width: 1280px;
+   padding:0 2%;
+   margin:0 auto;
+
+}
+
+.w33{
+   width: 33.3%;
+   padding: 0 10px;
+}
+
+.w50{
+   padding:0 10px;
+   width: 50%;
+}
+
+.left{
+   float: left;
+}
+
+.right{
+   float: right;
+}
+
+.clear{
+   clear: both;
+}
+/**Estilização do site**/
+header{
+    background: rgba(13, 75, 70, 0.91);
+   padding: 10px 0;
+
+
+}
+
+.logo{
+   position: relative;
+   top:5px;
+   font-size: 23px;
+    font-weight: 300;
+   text-transform: uppercase ;
+   color: white;
+   padding: 0 10px ;
+
+
+}
+nav.desktop ul{
+   position: relative;
+   top:10px;
+   list-style-type: none ;
+
+}
+nav.desktop li{
+   font-weight:300 ;
+   font-size: 12px ;
+   padding: 0 30px ;
+   text-transform: uppercase;
+   display: inline-block;
+
+}
+nav.desktop a{
+   color: white;
+   text-decoration: none ;
+}
+.mobile{
+   display: none;/*só vai mostrar quando estiver em telas menores como de celular */
+}
+
+.banner-principal{
+    width: 100%;
+    height: 600px;
+    /** background-image:url("escri.jpg"); **/
+   /**cubra toda tela **/
+    background-size: cover ;
+   position: relative;
+}
+.overlay{
+   position: absolute;
+   letf: 0;
+   top:0;
+   width: 100%;
+   height: 100%;
+   /**esse 1 vem antes do 2 **/
+   z-index: 1;
+   background-color:rgba(51,51,51,0.6);
+}
+section.banner-principal form{
+   width: 98%;
+   max-width:600px ;
+   /**esse 2 vem depois do 1 **/
+   /**quanto maior o numero mais acima vai ficar  **/
+   z-index: 2;
+   position: absolute;
+   /** centralizar**/
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+}
+section.banner-principal form h2{
+   color: white;
+   font-weight: 200;
+   font-size: 30px;
+   text-align:center;
+}
+
+section.banner-principal form input[type=email]{
+  width: 100%;
+  height: 50px;
+  margin-top:7px;/*espaçamento */
+  background: white;
+  color: #333;
+  font-size: 22px;
+  padding-left: 10px;
+}
+section.banner-principal form input[type=submit]{
+  width: 100%;
+  height: 50px;
+  margin-top:7px;/*espaçamento */
+  background: rgba(13, 75, 70, 0.91);
+  color: white;
+  font-size: 22px;
+  padding-left: 10px;
+   cursor:pointer;
+   border: 0 ;
+
+}
+
+footer{
+    background: rgba(13, 75, 70, 0.91);
+   padding: 1px 0;
+}
+
+footer.fixed{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+
+}
+
+footer p{
+   color: white;
+   text-align: center;
+   font-weight:400;
+   font-size: 16px;
+   padding: 0;
+   margin-top: 7px ;
+}
+
+
+
+@media screen and (max-width: 700px){
+   /*para o menu desaparece quando estiver em 700px */
+   nav.desktop{
+      display: none;
+   }
+
+   nav.mobile{
+      display: block;
+   }
+   .botao-menu-mobile{
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+      padding: 0 8px ;
+   }
+   nav.mobile ul{
+      top:55px;
+      z-index: 3;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+       background-size: cover ;
+      padding: 0;
+   }
+   nav.mobile li{
+      font-weight: 300;
+      width: 100%;
+      display: block;
+      background: white;
+      border-bottom:1px solid #ccc;
+      font-size: 17px;
+      padding:8px 0;
+   }
+   nav.mobile li a{
+      display: block;
+      color: #444;
+      text-decoration: none;
+   }}

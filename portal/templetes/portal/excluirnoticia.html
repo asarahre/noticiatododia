@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <h4>Notícias</h4>
+            <hr>
+             <a class=" btn btn-link btn-outline-dark"  href="{% url 'adicionarnoticia' %}">adicionar </a>
+
+          <table class="table table-striped">
+                <thead>
+                 <tr>
+                       <th>Id</th>
+                      <th>Titulo</th>
+                      <th>Autor</th>
+                      <th>Data</th>
+                      <th>Assunto</th>
+                      <th>imagem</th>
+                      <th>Ações</th>
+
+                 </tr>
+                </thead>
+            <tbody>
+            {% for noticia in noticia %}
+                <tr>
+                <td> {{ noticia.id}} </td>
+                <td> {{ noticia.titulo}} </td>
+                <td> {{ noticia.autor }}</td>
+                  <td>{{ noticia.data|date:'d/m/Y'}}</td>
+                 <td> {{ noticia.assunto }}</td>
+
+                 <td>  {% if noticia.image %}
+                     <img src="{{ noticia.image.url }}" alt="" width="120px">
+                     {% else %}
+                     {% endif  %}
+                 </td>
+
+
+                <td>
+                    <a class="btn btn-danger" href="{% url 'deletarnoticia' noticia.id %}"
+                    onclick="return confirm('tem certeza que deseja excluir essa Noticia')"
+                    > excluir </a>
+                </td>
+            </tr>
+            {%  endfor %}
+
+            </tbody>
+        </table>
+        </div>
+
+    </div>
+{% endblock %}
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.3/assets/js/docs.min.js"></script>
+
+
